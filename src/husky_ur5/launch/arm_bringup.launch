@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<launch>
+
+
+  <arg name="controller_config_file" default="$(find husky_ur5)/config/ur5_controllers.yaml" doc="Config file used for defining the ROS-Control controllers."/>
+  <arg name="controllers" default="joint_state_controller eff_joint_traj_controller"/>
+  <arg name="stopped_controllers" default="joint_group_eff_controller"/>
+
+  <!--Robot description and related parameter files -->
+  <arg name="robot_description_file" default="$(dirname)/inc/load_ur5.launch.xml" doc="Launch file which populates the 'robot_description' parameter."/>
+  <arg name="joint_limit_params" default="$(find husky_ur5)/config/ur5/joint_limits.yaml"/>
+  <arg name="kinematics_params" default="$(find husky_ur5)/config/ur5/default_kinematics.yaml"/>
+  <arg name="physical_params" default="$(find husky_ur5)/config/ur5/physical_parameters.yaml"/>
+  <arg name="visual_params" default="$(find husky_ur5)/config/ur5/visual_parameters.yaml"/>
+
+
+
+  <!-- Load urdf on the parameter server -->
+  <include file="$(arg robot_description_file)">
+    <arg name="joint_limit_params" value="$(arg joint_limit_params)"/>
+    <arg name="kinematics_params" value="$(arg kinematics_params)"/>
+    <arg name="physical_params" value="$(arg physical_params)"/>
+    <arg name="visual_params" value="$(arg visual_params)"/>
+  </include>
+
+ <!-- Load controller settings -->
+  <rosparam file="$(arg controller_config_file)" command="load"/>
+
+   <!-- Load and start the controllers listed in the 'controllers' arg. -->
+  <node name="ros_control_controller_spawner" pkg="controller_manager" type="spawner"
+    args="$(arg controllers)" output="screen" respawn="false" />
+
+  <!-- Load other controllers, but do not start them -->
+  <node name="ros_control_stopped_spawner" pkg="controller_manager" type="spawner"
+    args="--stopped $(arg stopped_controllers)" output="screen" respawn="false" />
+</launch>

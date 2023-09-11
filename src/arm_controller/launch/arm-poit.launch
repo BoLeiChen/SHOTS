@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<launch>
+
+  <node pkg="arm_controller" type="arm_control_call.py" name="controller" output="screen" >
+  </node>
+
+</launch>
+

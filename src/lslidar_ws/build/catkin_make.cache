@@ -1,0 +1,2 @@
+lslidar_c16_driver/lslidar_c16:lslidar_c16_driver/lslidar_c16_decoder:lslidar_c16_driver/lslidar_c16_driver:lslidar_c16_driver/lslidar_c16_msgs
+-DCATKIN_DEVEL_PREFIX=/home/ros/lslidar_ws/devel -DCMAKE_INSTALL_PREFIX=/home/ros/lslidar_ws/install -G Unix Makefiles

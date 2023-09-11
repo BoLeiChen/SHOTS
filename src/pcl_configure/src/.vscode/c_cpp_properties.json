@@ -1,0 +1,53 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/ros/Husky_ws/devel/include/**",
+        "/home/ros/catkin_ws/devel/include/**",
+        "/opt/ros/melodic/include/**",
+        "/home/ros/Husky_ws/src/A-LOAM/include/**",
+        "/home/ros/Husky_ws/src/arm_controller/include/**",
+        "/home/ros/catkin_ws/src/VINS-Fusion/camera_models/include/**",
+        "/home/ros/Husky_ws/src/cloud_merger/include/**",
+        "/home/ros/Husky_ws/src/count/include/**",
+        "/home/ros/catkin_ws/src/Fiesta/include/**",
+        "/home/ros/catkin_ws/src/find_object_2d/include/**",
+        "/home/ros/Husky_ws/src/fkie_ddynamic_reconfigure/include/**",
+        "/home/ros/Husky_ws/src/fkie_environmental_measurements/fkie_measurement_sensor_simulator/include/**",
+        "/home/ros/Husky_ws/src/fkie-nbv-planner/include/**",
+        "/home/ros/Husky_ws/src/husky/husky_base/include/**",
+        "/home/ros/Husky_ws/src/husky_ur5/include/**",
+        "/home/ros/Husky_ws/src/joy_node/include/**",
+        "/home/ros/Husky_ws/src/LeGO-LOAM/LeGO-LOAM/include/**",
+        "/home/ros/Husky_ws/src/lslidar_ws/src/lslidar_c16_driver/lslidar_c16_decoder/include/**",
+        "/home/ros/Husky_ws/src/lslidar_ws/src/lslidar_c16_driver/lslidar_c16_driver/include/**",
+        "/home/ros/catkin_ws/src/object_detection/include/**",
+        "/home/ros/catkin_ws/src/octomap_mapping/octomap_server/include/**",
+        "/home/ros/Husky_ws/src/pcl_configure/include/**",
+        "/home/ros/Husky_ws/src/pointcloud_merger/include/**",
+        "/home/ros/Husky_ws/src/pointcloud_to_laserscan-lunar-devel/include/**",
+        "/home/ros/Husky_ws/src/realsense_ros_gazebo/include/**",
+        "/home/ros/Husky_ws/src/robot_pose_ekf/include/**",
+        "/home/ros/catkin_ws/src/open_manipulator_dependencies/roboticsgroup_gazebo_plugins/include/**",
+        "/home/ros/Husky_ws/src/tare_planner/src/tare_planner/include/**",
+        "/home/ros/catkin_ws/src/turtlebot3_simulations/turtlebot3_fake/include/**",
+        "/home/ros/catkin_ws/src/turtlebot3_simulations/turtlebot3_gazebo/include/**",
+        "/home/ros/catkin_ws/src/turtlebot3_manipulation/turtlebot3_manipulation_bringup/include/**",
+        "/home/ros/catkin_ws/src/turtlebot3_manipulation/turtlebot3_manipulation_gui/include/**",
+        "/home/ros/Husky_ws/src/velodyne_simulator/velodyne_gazebo_plugins/include/**",
+        "/home/ros/Husky_ws/src/waypoint_rviz_plugin/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

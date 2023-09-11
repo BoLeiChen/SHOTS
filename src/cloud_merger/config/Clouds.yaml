@@ -1,0 +1,21 @@
+#input topic info, (yaw,pitch,roll in degree/ x,y,z in meter)
+CloudIn1:
+  topic_name: /velodyne_points1
+  pose_yaw: 0
+  pose_pitch: 0
+  pose_roll: 0
+  pose_x: -0.5
+  pose_y: 0
+  pose_z: 0.2377
+CloudIn2:
+  topic_name: /velodyne_points2
+  pose_yaw: 0
+  pose_pitch: 0
+  pose_roll: 0
+  pose_x: 0.5
+  pose_y: 0
+  pose_z: 0.2377
+#output topic info (frame_id for virtual frame)
+CloudOut:
+  topic_name: points_raw
+  frame_id: base_link

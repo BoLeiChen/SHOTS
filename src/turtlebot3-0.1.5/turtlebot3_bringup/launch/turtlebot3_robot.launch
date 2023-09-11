@@ -1,0 +1,14 @@
+<launch>
+
+    <param name="robot_description" textfile="$(find turtlebot3_description)/urdf/tb3.urdf" />           
+    
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" >
+    </node>      
+
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher">
+       <param name="publish_frequency" type="double" value="50.0" />
+    </node>  
+  <include file="$(find turtlebot3_bringup)/launch/turtlebot3_core.launch"/>
+  <include file="$(find racebot_tools)/launch/lslidar.launch"/>
+
+</launch>

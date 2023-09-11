@@ -1,0 +1,36 @@
+<launch>
+
+  <node pkg="loam_interface" type="loamInterface" name="loamInterface" output="screen" required="true">
+<!--LEGO-LOAM-->
+    <!--param name="stateEstimationTopic" type="string" value="/aft_mapped_to_init" />
+    <param name="registeredScanTopic" type="string" value="/points_raw_new" />
+    <param name="flipStateEstimation" type="bool" value="true" />
+    <param name="flipRegisteredScan" type="bool" value="true" />
+    <param name="sendTF" type="bool" value="false" />
+    <param name="reverseTF" type="bool" value="false" /-->
+
+<!--LIO-SAM-->
+    <!--param name="stateEstimationTopic" type="string" value="/lio_sam/mapping/odometry" />
+    <param name="registeredScanTopic" type="string" value="/lio_sam/mapping/cloud_registered" />
+    <param name="flipStateEstimation" type="bool" value="false" />
+    <param name="flipRegisteredScan" type="bool" value="false" />
+    <param name="sendTF" type="bool" value="false" />
+    <param name="reverseTF" type="bool" value="false" /-->
+
+    <!-- <param name="stateEstimationTopic" type="string" value="/integrated_to_init" />
+    <param name="registeredScanTopic" type="string" value="/rslidar_points" />
+    <param name="flipStateEstimation" type="bool" value="true" />
+    <param name="flipRegisteredScan" type="bool" value="false" />
+    <param name="sendTF" type="bool" value="false" />
+    <param name="reverseTF" type="bool" value="false" /> -->
+
+<!--No loam-->
+    <param name="stateEstimationTopic" type="string" value="/ground_truth/state" />
+    <param name="registeredScanTopic" type="string" value="/points_raw_new" />
+    <param name="flipStateEstimation" type="bool" value="false" />
+    <param name="flipRegisteredScan" type="bool" value="false" />
+    <param name="sendTF" type="bool" value="true" />
+    <param name="reverseTF" type="bool" value="false" />
+  </node>
+
+</launch>

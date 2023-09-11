@@ -1,0 +1,13 @@
+<launch>
+
+
+<!-- known map server -->
+
+
+<!-- amcl -->
+<include file="$(find local_planner)/launch/amcl_demo1.launch" />
+
+<!-- Move base -->
+<include file="$(find local_planner)/launch/move_base_mapless_demo.launch"/>
+  
+</launch>

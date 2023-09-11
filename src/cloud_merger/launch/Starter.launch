@@ -1,0 +1,9 @@
+<launch>
+	
+	
+	
+	<!-- Load cloud topic info configurations from YAML file to parameter server -->
+	<rosparam file="$(find cloud_merger)/config/Clouds.yaml" command="load"/>
+	<!-- Load the Node -->
+	<node name ="CloudMerger" pkg="cloud_merger" type="cloud_merger" output="screen"/>
+</launch>

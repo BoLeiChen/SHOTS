@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<robot name="husky" xmlns:xacro="http://wiki.ros.org/xacro">
+    <xacro:arg name="robot_namespace" default="$(optenv ROBOT_NAMESPACE /)" />
+    <xacro:arg name="gpu" default="false"/>
+    <xacro:property name="gpu" value="$(arg gpu)" />
+    <xacro:include filename="$(find ur_description)/urdf/inc/ur5_macro.xacro" />
+    <xacro:include filename="$(find husky_ur5)/urdf/laser.urdf.xacro" />
+    <xacro:arg name="transmission_hw_interface" default="hardware_interface/EffortJointInterface"/>
+    <xacro:ur5_robot prefix="ur5_" transmission_hw_interface="$(arg transmission_hw_interface)" />
+    <xacro:include filename="$(find husky_description)/urdf/husky.urdf.xacro" />
+    
+
+        <joint name="joint_ur5" type="fixed">
+            <parent link="base_link"/>
+            <child link="ur5_base_link"/>
+            <origin xyz="0 0 0.25" rpy="0 0 0" />
+        </joint>
+
+        <joint name="joint_husky_laser" type="fixed">
+            <parent link="base_link"/>
+            <child link="laser_base_footprint"/>
+            <origin xyz="0 0 0.4" rpy="0 0 0" />
+        </joint>
+</robot>

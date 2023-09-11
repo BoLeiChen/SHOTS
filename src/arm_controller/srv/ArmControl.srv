@@ -1,0 +1,5 @@
+# 客户端请求时发送的两个数字
+geometry_msgs/Pose pose
+---
+# 服务器响应发送的数据
+bool success

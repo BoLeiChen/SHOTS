@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<launch>
+
+  <node pkg="husky_ur5" type="controller.py" name="controller" output="screen" >
+  </node>
+
+</launch>
+

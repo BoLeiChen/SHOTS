@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<launch>
+
+  <node pkg="count" type="lengthcount.py" name="lengthcount" output="screen" >
+  </node>
+  <node pkg="count" type="maincount.py" name="maincount" output="screen" >
+  </node>
+
+  <node pkg="count" type="voxelcount" name="voxelcount" output="screen" >
+  </node>
+</launch>
+

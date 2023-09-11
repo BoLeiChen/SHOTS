@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+ 
+<launch>
+<node pkg="pcl_configure" type="passthrough" name="passthrough">
+	<remap from="cloud_input" to="/camera/depth/color/points" />
+</node>
+<node pkg="pcl_configure" type="voxel_grid" name="voxel_grid">
+	<remap from="cloud_input" to="/points2_pass" />
+</node>
+<node pkg="pcl_configure" type="sor_outlier_removal" name="sor_outlier_removal">
+	<remap from="cloud_input" to="/points2_voxel" />
+</node>
+
+<node pkg="pcl_configure" type="corpbox" name="box_removal">
+	<remap from="cloud_input" to="/points_raw" />
+</node>
+
+</launch>
