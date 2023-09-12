@@ -55,7 +55,7 @@ python semantic_cloud.py
 
 <img src="https://github.com/BoLeiChen/VM-SHOTS/assets/60416370/367452e7-451c-430b-9bb9-29c0649020db" width="80%" ></img>
 
-We simulate the search for casualties scenario in a 10 x 10 x 2 (m^3) sized simulation.
+We simulate the search for casualties scenario in a 10 x 10 x 2 ($m^3$) sized simulation.
 
 ## 4. Real machine experiment
 
