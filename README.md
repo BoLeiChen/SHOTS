@@ -57,7 +57,7 @@ python semantic_cloud.py
 
 We simulate the search for casualties scenario in a 10 x 10 x 2 ($m^3$) sized simulation. The VM-robot uses a depth camera to acquire RGB images and depth images for CLIP object localization and Octomap construction, respectively. In the above figure, the robot first localizes to the target object via CLIP using the acquired RGB image (a) and maps its confidence into the local Octomap (b). Finally, the VM-robot switches from exploration to search mode (d) when the evaluated object confidence and its surrounding uncertainty exceed a preset threshold.
 
-## 4. Real machine experiment
+## 4. Real robot experiment
 
 <img src="https://github.com/BoLeiChen/VM-SHOTS/assets/60416370/af7c2157-6f41-4fbf-a1da-b0b06eb0fec0" width="80%" ></img>
 
