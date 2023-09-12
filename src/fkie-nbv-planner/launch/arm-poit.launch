@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<launch>
+
+  <node pkg="fkie_nbv_planner" type="arm_control_call.py" name="controller" output="screen" >
+  </node>
+  <!-- <node pkg="fkie_nbv_planner" type="object_goal_decompose.py" name="controller" output="screen" > -->
+  <!-- </node> -->
+
+</launch>
+

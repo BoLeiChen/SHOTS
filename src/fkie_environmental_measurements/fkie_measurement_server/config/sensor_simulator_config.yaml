@@ -1,0 +1,11 @@
+sources:
+  source_0:
+    name: "hot-spot 1"
+    intensity: 300.0
+    x: -4.8
+    y: -5.2
+    z: 1.0
+    function: "linear"
+    linear_alpha: 5
+    color_rgba: [0.0, 0.7, 0.0, 0.8] 
+    text_color_rgba: [0.8, 0.8, 0.8, 0.8]

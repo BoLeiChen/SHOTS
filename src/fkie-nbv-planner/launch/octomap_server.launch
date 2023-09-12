@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+  <arg name="robot_ns" default="robot"/>
+
+  <node name="octomap_server" pkg="octomap_server" type="octomap_server_node" ns="$(arg robot_ns)" clear_params="true">
+    <param name="capability_group" value="planner"/>
+
+    <param name="frame_id" type="string" value="/map"/>
+    <param name="resolution" value="0.1"/>
+    <param name="base_frame_id" value="/base_footprint"/>
+    <param name="sensor_model/max_range" value="2.5"/>
+
+    <param name="pointcloud_min" value="0.0"/>
+    <param name="pointcloud_max" value="2.5"/>
+
+    <param name="occupancy_max_z" value="2.5"/>
+    <param name="occupancy_max_z" value="-0.2"/>
+
+    <param name="filter_ground" type="bool" value="false"/>
+
+    <remap from="cloud_in" to="/points2_out"/>
+  </node>
+</launch>

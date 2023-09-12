@@ -1,0 +1,3 @@
+Header header
+float32 grid_size
+fkie_measurement_msgs/MeasurementEstimationValue[] values

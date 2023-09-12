@@ -1,0 +1,9 @@
+# input:
+string[] measurement_type_list # List of measurement types to be computed
+geometry_msgs/PointStamped[] interpolation_points # List of points for computing interpolation
+---
+# output: 
+string[]  measurement_type_list # List of measurement types succesfully computed
+MeasurementGaussianStatistics[] statistics # gaussian regression statistics (interpolation result) for each [source_type]
+---
+# feedback: Not provided

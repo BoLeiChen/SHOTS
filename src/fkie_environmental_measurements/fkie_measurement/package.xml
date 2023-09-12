@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>fkie_measurement</name>
+  <version>0.0.0</version>
+  <description>The fkie_measurement package</description>
+
+  <author email="francisco.garcia.rosas@fkie.fraunhofer.de">Francisco Garcia</author>
+  <maintainer email="francisco.garcia.rosas@fkie.fraunhofer.de">Francisco Garcia</maintainer>
+
+  <license>Apache License 2.0</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <exec_depend>fkie_measurement_msgs</exec_depend>
+  <exec_depend>fkie_measurement_server</exec_depend>
+  <exec_depend>fkie_measurement_sensor_simulator</exec_depend>
+  <exec_depend>fkie_measurement_tools</exec_depend>
+
+  <export>
+  </export>
+</package>

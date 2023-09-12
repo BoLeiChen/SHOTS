@@ -1,0 +1,3 @@
+<launch>
+  <test test-name="fkie_ddynamic_reconfigure_test" pkg="fkie_ddynamic_reconfigure" type="fkie_ddynamic_reconfigure-test" />
+</launch>

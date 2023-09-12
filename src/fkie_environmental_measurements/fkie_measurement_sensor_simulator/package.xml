@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>fkie_measurement_sensor_simulator</name>
+  <version>0.0.0</version>
+  <description>The fkie_measurement_sensor_simulator package</description>
+
+  <author email="francisco.garcia.rosas@fkie.fraunhofer.de">Francisco Garcia</author>
+  <maintainer email="francisco.garcia.rosas@fkie.fraunhofer.de">Francisco Garcia</maintainer>
+
+  <license>Apache License 2.0</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <depend>roscpp</depend>
+  <depend>tf</depend>
+  <depend>tf2_ros</depend>
+  <depend>fkie_measurement_msgs</depend>
+
+  <!-- The export tag contains other, unspecified, tags -->
+  <export>
+    <!-- Other tools can request additional information be placed here -->
+  </export>
+</package>

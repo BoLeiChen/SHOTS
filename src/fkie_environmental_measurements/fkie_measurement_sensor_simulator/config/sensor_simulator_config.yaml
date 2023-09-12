@@ -1,0 +1,33 @@
+sources:
+  source_0:
+    name: "hot-spot 1"
+    intensity: 10.0
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    function: "linear"
+    linear_alpha: 5
+    color_rgba: [0.0, 0.7, 0.0, 0.8] 
+    text_color_rgba: [0.8, 0.8, 0.8, 0.8]
+
+  source_1:
+    name: "hot-spot 2"
+    intensity: 10.0
+    x: 1.0
+    y: 3.0
+    z: 1.0
+    function: "inverse_squared"
+    linear_alpha: 5
+    color_rgba: [0.0, 0.0, 0.7, 0.8]
+    text_color_rgba: [0.8, 0.8, 0.8, 0.8]
+
+  source_2:
+    name: "hot-spot 3"
+    intensity: 10.0
+    x: 2.0
+    y: 2.0
+    z: 1.0
+    function: "exponential"
+    exponential_decay_rate: 3
+    color_rgba: [0.7, 0.0, 0.0, 0.8]
+    text_color_rgba: [0.8, 0.8, 0.8, 0.8]

@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>fkie_measurement_tools</name>
+  <version>0.0.0</version>
+  <description>The fkie_measurement_tools package</description>
+
+  <author email="francisco.garcia.rosas@fkie.fraunhofer.de">Francisco Garcia</author>
+  <maintainer email="francisco.garcia.rosas@fkie.fraunhofer.de">Francisco Garcia</maintainer>
+
+  <license>Apache License 2.0</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <depend>roscpp</depend>
+  <depend>octomap</depend>
+  <depend>std_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>visualization_msgs</depend>
+  <depend>octomap_msgs</depend>
+  <depend>octomap_ros</depend>
+  <depend>pcl_ros</depend>
+  <depend>actionlib</depend>
+  <depend>tf2</depend>
+  <depend>tf2_geometry_msgs</depend>
+
+  <depend>fkie_measurement_msgs</depend>
+  <depend>grid_map_core</depend>
+  <depend>grid_map_ros</depend>
+  <depend>fkie_ddynamic_reconfigure</depend>
+
+  <!-- The export tag contains other, unspecified, tags -->
+  <export>
+    <!-- Other tools can request additional information be placed here -->
+  </export>
+</package>

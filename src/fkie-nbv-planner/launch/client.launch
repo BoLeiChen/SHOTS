@@ -1,0 +1,8 @@
+<launch>
+
+  <node name="rrt_client" pkg="fkie_nbv_planner" type="client.py" output="screen">
+
+  </node>
+
+
+</launch>

@@ -1,0 +1,40 @@
+<launch>
+  <arg name="global_frame" default="world"/>
+  <arg name="sensor_frame" default="sensor_frame"/>
+
+  <!-- Launch measurement server -->
+  <node name="measurement_server_node" pkg="fkie_measurement_server" type="measurement_server_node.py" clear_params="true">
+    <param name="capability_group" value="ms"/>
+    <rosparam command="load" file="$(find fkie_measurement_server)/config/measurement_server_configs.yaml" subst_value="True" />
+  </node>
+
+  <!-- launch sensor simulator -->
+  <node name="SensorSimulatorNode" pkg="fkie_measurement_sensor_simulator" type="SensorSimulatorNode" clear_params="true">
+    <param name="capability_group" value="ms"/>
+
+    <rosparam command="load" file="$(find fkie_measurement_server)/config/sensor_simulator_config.yaml" />
+
+    <param name="global_frame" value="$(arg global_frame)"/>
+    <param name="sensor_frame" value="$(arg sensor_frame)"/>
+    <param name="rate" value="2.0"/>
+    <param name="marker_size" value="0.4"/>
+    <param name="topic_measurement" value="measurement"/>
+
+    <param name="unique_serial_id" value="ASD-123"/>
+    <param name="manufacturer_device_name" value="Dummy Thermometer Device"/>
+    <param name="device_classification" value="M"/>
+
+    <param name="sensor_name" value="sensor_1"/>
+    <param name="sensor_source_type" value="temperature"/>
+    <param name="sensor_unit" value="C"/>
+  </node>
+
+  <node name="tf_world_sensor_frame" pkg="tf2_ros" type="static_transform_publisher" args="1.0 0.5 0.6 0 0 0 $(arg global_frame) $(arg sensor_frame)">
+    <param name="capability_group" value="ms"/>
+  </node>
+
+  <node name="rviz_ms" pkg="rviz" type="rviz" output="screen" clear_params="true" args="-d $(find fkie_measurement_server)/config/measurement_server.rviz">
+    <param name="capability_group" value="ms"/>
+  </node>
+
+</launch>

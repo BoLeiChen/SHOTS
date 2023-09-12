@@ -1,0 +1,39 @@
+# global/general parameters
+rate: 2.0
+global_frame: $(arg global_frame)
+
+# Parameters for measurement server module
+measurement_server:
+  measurement_xml_file: $(find fkie_measurement_server)/data/measurements.xml
+  sensors:
+    sensor_0:
+      unique_serial_id: "ASD-123"
+
+      # if the sensor doesn't provide a location
+      frame_id: $(arg sensor_frame)
+      topic: measurement
+
+      # if the sensor provides location
+      topic_located: measurement_located
+
+# Parameters for interpolation module
+interpolation:
+  grid_size: 1.0
+  padding: 0.0
+  marker_alpha: 0.3
+  method: RBF # LinearNDInterpolator, NearestNDInterpolator, RBF, OrdinaryKriging3D
+  RBF:
+    function: multiquadric # multiquadric - inverse - gaussian - linear - cubic - quintic - thin_plate
+  LinearNDInterpolator:
+    fill_value: -1.0
+    rescale: false
+  NearestNDInterpolator:
+    rescale: false
+  OrdinaryKriging3D:
+    kriging_type: ordinary # ordinary - universal
+    variogram_model: gaussian # linear, power, spherical, gaussian, exponential
+
+# Parameters for the boundary module
+boundary_polygons:
+  marker_alpha: 1.0
+  threshold_percentage: 0.23 # only use as fallback when no [threshold_list] is given

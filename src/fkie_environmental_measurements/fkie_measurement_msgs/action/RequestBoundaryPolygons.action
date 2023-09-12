@@ -1,0 +1,8 @@
+# goal definition
+string source_type
+---
+# result definition
+BoundaryPolygon[] boundaries
+MeasurementEstimation estimations
+---
+# feedback

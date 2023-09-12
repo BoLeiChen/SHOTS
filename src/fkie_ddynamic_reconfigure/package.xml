@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>fkie_ddynamic_reconfigure</name>
+  <version>0.2.2</version>
+  <description>The fkie_ddynamic_reconfigure package</description>
+
+  <maintainer email="francisco.garcia.rosas@fkie.fraunhofer.de">Francisco Garcia</maintainer>
+  <maintainer email="hilario.tome@pal-robotics.com">Hilario Tome</maintainer>
+  <maintainer email="luca.marchionni@pal-robotics.com">Luca Marchionni</maintainer>
+
+  <license>BSD</license>
+  <author email="hilario.tome@pal-robotics.com">Hilario Tome</author> -->
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <depend>dynamic_reconfigure</depend>
+  <depend>roscpp</depend>
+
+  <test_depend>rostest</test_depend>
+  <test_depend>google-mock</test_depend>
+</package>

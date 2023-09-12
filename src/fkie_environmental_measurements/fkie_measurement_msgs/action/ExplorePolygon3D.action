@@ -1,0 +1,11 @@
+# input: polygon id and the coordinates
+int16 boundary_id
+BoundaryPolygon boundary_coords
+---
+# output: Exploration failed or succecced  with some explanation
+bool complete_exploration
+int16 explored_boundary_id
+---
+# feedback: Current planner in use and the current goal pose
+string current_planner
+geometry_msgs/PoseStamped  current_goal_pose

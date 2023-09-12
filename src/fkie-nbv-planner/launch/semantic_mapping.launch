@@ -1,0 +1,10 @@
+<launch>
+
+<rosparam file="$(find fkie_nbv_planner)/params/octomap_generator.yaml" command="load"/>
+<node pkg="fkie_nbv_planner" type="octomap_generator" name="octomap_generator" output="screen"/>
+
+
+<!--rviz-->
+<node pkg="rviz" type="rviz" name="rviz" args="-d $(find fkie_nbv_planner)/123.rviz"/>
+
+</launch>

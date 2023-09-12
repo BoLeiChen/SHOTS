@@ -1,0 +1,6 @@
+# 客户端请求时发送的是否检测到对象和对象的pose
+bool found
+geometry_msgs/Pose obj_pose
+---
+# 服务器响应发送的数据
+bool success
