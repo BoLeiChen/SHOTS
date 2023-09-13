@@ -10,6 +10,8 @@ Central South University
 
 Object Target Search (OTS) tasks require robots to localize and navigate to objects specified by semantic labels, (e.g., find a fire extinguisher). Many existing OTS methods strongly rely on the semantic co occurrence relations among objects to imagine and localize the object targets seen in the learning phase. However, simplistic domestic and chaotic rescue scenarios often fail to provide rich semantics even require the robot to navigate to novel object instances. In addition, most of the existing OTS methods agree on a fixed Field of View (FoV) setting relative to the robot base, thus making it challenging to seek obscured objects (e.g., a shoe under the bed). To alleviate the above problems, we propose a semantic-heuristic OTS algorithm by promptly updating an Object Belief Field (OBF) for localizing object targets and designing a utility function for balancing exploration and exploitation. In particular, our method employs a flexible vision and allows the manipulator to translate and rotate the robot’s FoV to look around or even inspect hidden corners obscured by obstacles. Sufficient comparative and ablation studies validate that our method significantly improves the success rates and SPL metrics relative to the baselines. Furthermore, real-world experiments demonstrate our method can find novel objects without requiring rich scene priors.
 
+[![SHOTS](https://res.cloudinary.com/marcomontalbano/image/upload/v1694594948/video_to_markdown/images/youtube--mzsFSr4e3sQ-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=mzsFSr4e3sQ "SHOTS")
+
 This repository contains code for  VM-SHOTS.
 
 ## 2. Installation
@@ -23,12 +25,12 @@ Compile
 cd VM-SHOTS
 catkin build
 ```
-Configure yolov8
+Configure the conda environment
 ```
 cd ..
 git clone https://github.com/ultralytics/ultralytics.git
-conda create -n yolov8 python=3.7
-conda activate yolov8
+conda create -n SHOTS python=3.7
+conda activate SHOTS
 cd ultralytics
 pip install -r requirements.txt -i https://mirrors.bfsu.edu.cn/pypi/web/simple/
 pip install ultralytics
@@ -54,9 +56,9 @@ source ./devel/setup.bash
 roslaunch fkie_nbv_planner run_planner.launch
 ```
 
-Load CLIP(Run in yolov8 environment)
+Load CLIP(Run in SHOTS environment)
 ```
-source activate yolov8
+source activate SHOTS
 cd ./src/fkie-nbv-planner/scripts
 python semantic_cloud.py
 ```
