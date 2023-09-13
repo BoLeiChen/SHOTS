@@ -1,8 +1,6 @@
 # SHOTS: Semantic-Heuristic Object Target Search with Object Belief Field and Flexible Vision
 
-Bolei Chen, Yongzheng Cui, Haonan Yang, Ping Zhong, Yu Sheng, Jianxin Wang
-
-Central South University
+Bolei Chen, Yongzheng Cui, Haonan Yang, Ping Zhong, Yu Sheng, Miao Li, Jianxin Wang
 
 ## 1. Overview
 
@@ -83,7 +81,9 @@ We deploy VM-SHOTS to the Husky-UR5 robotics platform to conduct experiments in 
 This repository is released under the () license. See [LICENSE](https://github.com/BoLeiChen/VM-SHOTS/blob/main/LICENSE) for additional details.
 
 ## 7. Acknowledgement
-
+Code acknowledgements:
+ - `src/fkie-nbv-planner/scripts/semantic_cloud.py` modified from [Chefer et al.'s codebase](https://github.com/hila-chefer/Transformer-MM-Explainability), which was in turn modified from the original [CLIP codebase](https://github.com/openai/CLIP).
+ 
 
 **Coming soon ...**
 
