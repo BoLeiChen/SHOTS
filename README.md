@@ -8,7 +8,7 @@ Bolei Chen, Yongzheng Cui, Haonan Yang, Ping Zhong, Yu Sheng, Miao Li, Jianxin W
 
 Object Target Search (OTS) tasks require robots to localize and navigate to objects specified by semantic labels, (e.g., find a fire extinguisher). Many existing OTS methods strongly rely on the semantic co occurrence relations among objects to imagine and localize the object targets seen in the learning phase. However, simplistic domestic and chaotic rescue scenarios often fail to provide rich semantics even require the robot to navigate to novel object instances. In addition, most of the existing OTS methods agree on a fixed Field of View (FoV) setting relative to the robot base, thus making it challenging to seek obscured objects (e.g., a shoe under the bed). To alleviate the above problems, we propose a semantic-heuristic OTS algorithm by promptly updating an Object Belief Field (OBF) for localizing object targets and designing a utility function for balancing exploration and exploitation. In particular, our method employs a flexible vision and allows the manipulator to translate and rotate the robot’s FoV to look around or even inspect hidden corners obscured by obstacles. Sufficient comparative and ablation studies validate that our method significantly improves the success rates and SPL metrics relative to the baselines. Furthermore, real-world experiments demonstrate our method can find novel objects without requiring rich scene priors.
 
-This repository contains code for  VM-SHOTS.
+This repository contains code for SHOTS.
 
 ## 2. A demo video for SHOTS
 
@@ -20,7 +20,7 @@ This is a demo video of the experiments for the paper titled “SHOTS: Semantic-
 
 Clone
 ```sh
-git clone https://github.com/BoLeiChen/VM-SHOTS.git
+git clone https://github.com/BoLeiChen/SHOTS.git
 ```
 Compile
 ```sh
